@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Password Strength Analyzer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Password Strength Analyzer</h1>
+
+    <div class="input-group">
+
+        <label>Username</label>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Enter Username">
+
+    </div>
+
+    <div class="input-group">
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter Password">
+
+    </div>
+
+    <div class="show-password">
+
+        <input
+            type="checkbox"
+            id="showPassword">
+
+        <label for="showPassword">
+            Show Password
+        </label>
+
+    </div>
+
+    <div class="strength-box">
+
+        <h3>Password Strength</h3>
+
+        <div class="progress">
+
+            <div id="progress-bar"></div>
+
+        </div>
+
+        <p id="strength-text">
+            Enter a password...
+        </p>
+
+    </div>
+
+    <div class="checklist">
+
+        <h3>Requirements</h3>
+
+        <ul>
+
+            <li id="length">
+                ❌ At least 12 characters
+            </li>
+
+            <li id="uppercase">
+                ❌ Uppercase letter
+            </li>
+
+            <li id="lowercase">
+                ❌ Lowercase letter
+            </li>
+
+            <li id="number">
+                ❌ Number
+            </li>
+
+            <li id="special">
+                ❌ Special character
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="suggestions">
+
+        <h3>Suggestions</h3>
+
+        <ul id="suggestion-list">
+
+        </ul>
+
+    </div>
+
+    <button id="saveBtn">
+
+        Save Password
+
+    </button>
+
+    <p id="message"></p>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
